@@ -1,2 +1,2 @@
-# MOVproj
-run prediction for MOj project
+# MOJproj
+ceteate projrams to run prediction for MOj project.
