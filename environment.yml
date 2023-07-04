@@ -1,0 +1,10 @@
+name: proj2023
+channels:
+	- conda-forge
+	- base
+dependencies:
+	- python
+	- pandas
+	- numpy
+	- matplotlib
+	- sklearn
