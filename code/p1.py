@@ -129,7 +129,7 @@ def factorcoding():
     factorsCode.append(f3year)
     factorsCode.append(f4year)
     factorsCode.append(f5year)
-    factorsCode.append(fcrimeage)
+    factorsCode.append(crimeageCode(fcrimeage))
     st.write(factorsCode)
 
 
