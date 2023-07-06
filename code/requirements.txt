@@ -1,9 +1,9 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-altair=5.0.1=pyhd8ed1ab_0
-asttokens=2.2.1=pyhd8ed1ab_0
-attrs=23.1.0=pyh71513ae_1
+altair==5.0.1=pyhd8ed1ab_0
+asttokens==2.2.1=pyhd8ed1ab_0
+attrs==23.1.0=pyh71513ae_1
 aws-c-auth=0.6.28=h04ea561_9
 aws-c-cal=0.6.0=h6ba3258_0
 aws-c-common=0.8.23=hcfcfb64_0
