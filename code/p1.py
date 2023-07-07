@@ -5,17 +5,21 @@ from datetime import date
     
 def genderCode(x):
     if x=='男':
-        return 0
-    if x=='女':
         return 1
+    if x=='女':
+        return 0
     
 def eduCode(x):
-    if x in ['博士','碩士','大學']:
+    if x in ['博士','碩士','研究所']:
         return 0
-    if x in ['專科','高中']:
+    if x in ['專科','大學']:
         return 1
-    if x in ['其他']:
+    if x in ['高中', '高職']:
         return 2
+    if x in ['國中', '國小']:
+        return 3
+    if x in ['其他']:
+        return 4
     
 def healthCode(x):
     if x in ['良好','健康']:
@@ -28,33 +32,33 @@ def healthCode(x):
         return 3
     
 def ageCode(x):
-    if x < 24:
+    if 18 < x <= 30:
         return 0
-    elif 24 <= x < 29:
+    elif 30 < x <= 40:
         return 1
-    elif 29 <= x <34:
+    elif 40 < x <= 50:
         return 2
-    elif 34 <= x <39:
+    elif 50 < x <= 60:
         return 3
-    elif 39 <= x <44:
+    elif 60 < x <= 70:
         return 4
-    elif 44 <= x < 48:
+    elif x > 70:
         return 5
     else:
         return 6
     
 def lenCode(x):
-    if x < 7:
+    if x < 1:
         return 0
-    elif 7 <= x < 13:
+    elif 1 <= x <= 10:
         return 1
-    elif 13 <= x < 19:
+    elif 10 < x <= 20:
         return 2
-    elif 19 <= x < 25:
+    elif 20 < x <= 30:
         return 3
-    elif 25 <= x < 31:
+    elif 30 < x <= 40:
         return 4
-    elif 31 <= x < 37:
+    elif 40 < x <= 50:
         return 5
     else:
         return 6
@@ -62,29 +66,29 @@ def lenCode(x):
 def vioCode(x):
     if x < 1:
         return 0
-    elif 1 <= x < 5:
+    elif 1 <= x <= 10:
         return 1
-    elif 5 <= x < 9:
+    elif 10 < x <= 20:
         return 2
-    else:
+    elif 20 < x <= 30:
         return 3
+    else:
+        return 4
     
 def awardCode(x):
-    if x <1:
+    if x < 1:
         return 0
-    elif 1 <= x < 11:
+    elif 1 <= x <= 10:
         return 1
-    elif 11 <= x <21:
+    elif 10 < x <= 20:
         return 2
-    elif 21 <= x < 31:
+    elif 20 < x <= 30:
         return 3
-    elif 31 <= x <41:
-        return 4
     else:
-        return 5
+        return 4
     
 def againCode(x):
-    if x in ["未註記","初犯"]:
+    if x in ["初犯"]:
         return 0
     if x in ["初再犯同罪","初再犯異罪"]:
         return 1
@@ -92,21 +96,23 @@ def againCode(x):
         return 2
     if x in ["初累犯同罪","初累犯異罪"]:
         return 3
-    if x in ["其他累犯"]:
+    if x in ["累犯","累犯同罪","累犯異罪"]:
         return 4
+    if x in ["其他","未註記"]:
+        return 5
 
 def crimeageCode(x):
-    if x < 21:
+    if 10 < x <= 20:
         return 0
-    elif 21 <= x < 31:
+    elif 20 < x <= 30:
         return 1
-    elif 31 <= x < 41:
+    elif 30 < x <= 40:
         return 2
-    elif 41 <= x < 51:
+    elif 40 < x <= 50:
         return 3
-    elif 51 <= x < 61:
+    elif 50 < x <= 60:
         return 4
-    elif 61 <= x < 71:
+    elif 60 < x <= 70:
         return 5
     else:
         return 6
